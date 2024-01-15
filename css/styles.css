@@ -1,0 +1,997 @@
+/*General*/
+
+body {
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Ajustado para mejorar la legibilidad */
+    font-family: 'Lato', sans-serif;
+}
+.link-title {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    cursor: pointer;
+}
+.link-title:visited {
+    color: #000000;
+}
+.links{
+    color: #ffffff; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+.links:hover {
+    text-decoration: underline; /* Añade un subrayado al pasar el ratón por encima */
+}
+.links:active{
+    font-style: italic;
+}
+
+.links:visited {
+    color: #ffffff;
+}
+
+/*footer*/
+.maps {
+    display: none;
+}
+.footer {
+    background-color: #D9D9D9; /* Dark background for the footer */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 2;
+    margin: 10px 10% 0 10%;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 8px; /* Ajustado para mejorar la legibilidad */
+}
+
+.links-foot {
+    display: block; /* Makes the links stack vertically */
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 8px; /* Ajustado para mejorar la legibilidad */
+    color: #000;
+}
+.links-foot:hover {
+    text-decoration: underline; /* Añade un subrayado al pasar el ratón por encima */
+}
+.links-foot:active{
+    font-style: italic;
+}
+
+.links-foot:visited {
+    color: #000000;
+}
+
+.footer-section address {
+    font-size: 8px; /* Ajustado para mejorar la legibilidad */
+    font-style: normal; /* Addresses are italic by default */
+    padding-top: 10%;
+}
+
+.social-media-icons {
+    display: flex;
+    margin-top: 20%;
+    justify-content: right;
+    gap: 10px;
+}
+
+.social-media-icons img {
+    width: 24px; /* Size of the social media icons */
+    height: 24px;
+}
+
+
+/*header*/
+
+.nav-big {
+    display: none;
+}
+header {
+    background: #FFFFFF;
+    border-bottom: 3px solid #FFD700; /* Color de la línea amarilla */
+}
+
+.nav-mini {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-link img.logo {
+    width: 40px; /* Ajusta según el tamaño de tu logo */
+    height: auto;
+    margin-right: 10px; /* Asegúrate de tener un pequeño margen entre el logo y el título */
+}
+.logo-link2 img.logo2 {
+    display: none;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Cambiado de space-around a space-between */
+    height: 20px; /* Aumentado para dar más espacio */
+    width: 40px; /* Aumentado para dar más espacio */
+    cursor: pointer;
+    align-items: flex-end; /* Alineado a la derecha */
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 30px; /* Ajustado a la imagen proporcionada */
+    background-color: #333; /* Color de las barras del menú */
+    border-radius: 10px;
+}
+.menu-toggle:hover .bar {
+    background-color: #FFC700; /* Color amarillo para el efecto hover */
+}    
+
+.site-title1 {
+    font-size: 20px; /* Aumentado el tamaño para que sea más grande */
+    font-weight: bold;
+    font-family: 'Newsreader', serif;
+    color: #000;
+    margin: 0;
+    flex-grow: 1; /* Hace que el título ocupe el espacio disponible */
+    text-align: left; /* Alineado a la izquierda */
+}
+.site-title2 {
+    display: none;
+}
+
+/*Primera secció */
+.hero-content-big{
+    display: none;
+}
+.hero-section {
+    position: relative;
+    background-image: url("../images/foto_1.png"); /* Asegúrate de que esta es la ruta correcta a tu imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la sección */
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Esto centra el .hero-content vertical y horizontalmente */
+}
+
+.hero-content-min {
+    position: absolute;
+    width: 100%;
+    height: 123px;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para mejorar la legibilidad */
+}
+
+.titol {
+    font-size: 20px; /* Aumenta el tamaño del título */
+    font-weight: bold;
+    margin: 1rem 0 1rem 1rem; /* Agrega un margen inferior para separar del botón */
+    font-family: 'Newsreader', serif;
+    text-align: left;
+    color: white;
+}
+
+.button {
+    display: block;
+    font-size: 15px;
+    padding: 0.7rem 2rem;
+    border: none;
+    transition: transform 0.3s ease; /* Suaviza la transición del efecto */
+    color: black; /* Color del texto del botón */
+    border-radius: 0.5rem; /* Bordes redondeados para el botón */
+    margin: 1rem 0 1rem 1rem; /* Agrega un margen inferior para separar del botón */
+    cursor: pointer; 
+    background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #BE601C, #FFC700); /* Invierte la dirección del degradado para el estado hover */
+    transform: scale(0.95); /* Reduce el tamaño del botón al 95% al pasar el mouse */
+}
+
+/* Segona secció */
+.section-title {
+    font-family: 'Newsreader', serif;
+    font-size: 18px; /* Aumenta el tamaño del título */
+    color: black; 
+    padding: 0 ;
+    margin: 2rem 1rem 1rem 1rem; /* Agrega un margen inferior para separar del botón */
+}
+.title2 {
+    margin-top: 2rem;
+    display: inline-block;
+}
+.intro-section .section-title {
+    margin-top: 1rem;
+}
+h3 {
+    font-family: 'Newsreader', serif;
+    text-align: left;
+    font-size: 18px; /* Ajusta esto según tu diseño */
+    margin: 0;
+}
+.matches-section{
+    padding: 0 0 2rem 0;
+
+}
+
+.matches-slider {
+    position: relative;
+    text-align: center; /* Centra los botones y la imagen */
+    margin: 0;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    padding: 0.7rem 0.8rem;
+    background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0.5rem; /* Bordes redondeados para el botón */
+}
+
+.slider-button.prev {
+    left: 20px;
+}
+
+.slider-button.next {
+    right: 20px;
+}
+.button-icon{
+    font-size: 20px;
+    color: #ffff;
+}
+
+.slider-button:hover {
+    background-image: linear-gradient(to right, #BE601C, #FFC700); /* Invierte la dirección del degradado para el estado hover */
+    transform: scale(0.90); /* Reduce el tamaño del botón al 95% al pasar el mouse */
+    transition: transform 0.3s ease; /* Suaviza la transición del efecto */
+}
+
+.match img {
+    position: relative;
+    width: 190px; /* Ajusta la imagen al contenedor */
+    max-width: 600px; /* Ajusta el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.match1 img{
+    display: none;
+}
+
+.match-info  {
+    position: absolute;
+    width: 157px;
+    height: 50px;
+    bottom: 0%; /* Posiciona la información en la parte inferior de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center; /* Centra el texto */
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 1rem; /* Espacio alrededor del texto */
+}
+
+.second, .third {
+    display: none;
+}
+
+ p {
+    text-align: left;
+    font-size: 15px; /* Ajusta esto según tu diseño */
+    margin-top: 0.2rem;
+}
+.container-indicador {
+    display: flex; /* Alinea los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 4px; /* Espacio entre los elementos */
+    margin: 10px auto  auto auto; 
+}
+
+.circle {
+    width: 8px; /* Tamaño del círculo */
+    height: 8px; /* Tamaño del círculo */
+    background: linear-gradient(to right, orange, yellow); /* Gradiente de color */
+    border-radius: 50%; /* Redondea los bordes para hacer un círculo */
+}
+
+.rectangle {
+    width: 8px; /* Ancho del rectángulo */
+    height: 8px; /* Alto del rectángulo */
+    background-color: #F1F1F1; /* Color del rectángulo */
+}
+
+/*tercera part*/
+.members-section {
+    background-color: #EFEFEF;
+    padding: .5rem 0 2rem 0;
+}
+.members-section .container-indicador .rectangle {
+        background-color: #ffffff; /* Color del rectángulo */
+}
+
+/*Quarta part*/
+.news-rows-big {
+    display: none;
+
+}
+.news-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0 0 0;
+}
+
+.news-item {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.news-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.half-width {
+    width: calc(50% - 8px); /* Restar el espacio del gap */
+}
+
+.news-item img {
+    width: 100%;
+    display: block;
+}
+
+.full-width .news-content {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.half-width .news-content {
+    height: 50%;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.news-title {
+    color: white;
+    padding: 16px 0 10px 10px;
+    display: inline-block;
+}
+
+.news-button {
+    position: absolute;
+    background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+    color: white;
+    border: none;
+    border-radius: 0.3rem; /* Bordes redondeados para el botón */
+    padding: 0.2rem 0.7rem;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 1px;
+}
+
+.full-width .news-button{
+    margin: 10px 0 0 10px;
+    right: 10px;
+}
+
+.half-width .news-button {
+    display: block;
+    margin: 0 0 0 10px;
+}
+
+.news-button:hover {
+    background-image: linear-gradient(to right, #BE601C, #FFC700); /* Invierte la dirección del degradado para el estado hover */
+    transform: scale(0.90); /* Reduce el tamaño del botón al 95% al pasar el mouse */
+    transition: transform 0.3s ease; /* Suaviza la transición del efecto */
+}
+
+/*cinquena part*/
+.photo-section {
+    padding: 0 0 4rem 0;
+}
+/*2nd web - Intro*/
+
+.primer-section {
+    position: relative;
+    background-image: url("../images/foto_25.png"); /* Asegúrate de que esta es la ruta correcta a tu imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la sección */
+    height: 200px; 
+    margin-bottom: 10px;
+
+}
+.second-section {
+    position: relative;
+    background-image: url("../images/foto_26.png"); /* Asegúrate de que esta es la ruta correcta a tu imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la sección */
+    height: 200px; 
+    margin-bottom: 10px;
+}
+.third-section {
+    position: relative;
+    background-image: url("../images/foto_27.png"); /* Asegúrate de que esta es la ruta correcta a tu imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la sección */
+    height: 200px; 
+    margin-bottom: 10px;
+}
+.section-content {
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.section-text {
+    color: rgb(255, 255, 255);
+    padding-top: 60px;
+    margin: 0 1rem 0 1rem;
+    text-align: justify;
+
+}
+
+.fourth-section p {
+    color: #000;
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+.fourth-section img {
+    display: block;
+    position: relative;
+    margin: 20px auto 10px auto;
+    width: 10%; /* Ajusta la imagen al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.text-normal {
+    margin: 0 1rem 19px 1rem;
+    text-align: justify;
+}
+
+/*botiga*/
+.hid {
+    display: block;
+}
+.mostra {
+    display: none;
+}
+.producto-cart {
+    display: none;
+}
+
+.wrapper {
+    margin-bottom: 40px;
+}
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 40px 20px auto 20px;
+}
+.producto-imagen {
+    max-width: 100%;
+}
+.producto-detalles {
+    display: flex;
+    position: relative;
+    background-color: #000;
+    color: #FFFFFF;
+    padding: .7rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    margin-top: -1rem;
+}
+.producto-titulo {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+.producto-agregar {
+    background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0.3rem; /* Bordes redondeados para el botón */
+    padding: .4rem .7rem;
+    cursor: pointer;
+}
+.producto-agregar:hover {
+    background-image: linear-gradient(to right, #BE601C, #FFC700); /* Invierte la dirección del degradado para el estado hover */
+    transform: scale(0.95); /* Reduce el tamaño del botón al 95% al pasar el mouse */
+}
+
+/*Formulari*/
+.container {
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+form {
+    width: calc(100% - 20px); /* Restar el doble del padding del contenedor */
+    margin: auto; /* Centra el formulario horizontalmente */
+}
+.main-user-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-input-box:nth-child(2n) {
+    justify-content: space-between;
+}
+.user-input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+.user-input-box label {
+    width: 95%;
+    margin: 5px 0;
+    font-size: 15px;
+}
+.user-input-box input {
+    height: 30px;
+    width: 100%;
+    border-radius: 0.5rem; /* Bordes redondeados para el botón */
+    outline: none;
+    border: 2px solid #FFD700;
+}
+.horari-box {
+    margin-bottom: 30px;
+}
+.horari-category {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.horari-category label, 
+.horari-category input,
+.form-submit-btn input {
+    cursor: pointer;
+}
+.horari-title {
+    font-size: 15px;
+}
+.horari-category {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.comment-box{
+    justify-content: space-between;
+    align-items: center;
+} 
+textarea {
+    width : 100%;
+    position: relative;
+    border-radius: 0.5rem; /* Bordes redondeados para el botón */
+    box-sizing: border-box;
+    resize: none;
+    border: 2px solid #FFD700;
+    height: 100px;
+    margin-top: 10px;
+}
+.form-submit-btn {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;  /* Centra el contenido verticalmente */
+    padding: 10px;        /* Añade algo de espacio alrededor, si es necesario */
+
+}
+.form-submit-btn input {
+    width: 300px;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 0.5rem; /* Bordes redondeados para el botón */
+    border: none;
+    background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+}
+
+/*Media Quaries - 822px*/
+
+@media (min-width: 822px) {
+    .nav-mini {
+        display: none;
+    }
+    .logo-link img.logo {
+        display: none;
+    }
+    .site-title1 {
+        display: none;
+    }
+    .hero-content-min {
+        display: none;
+        
+    }
+    .news-mini {
+        display: none;
+    }
+    .match {
+        display: none;
+    }
+    .hid {
+        display: none;
+    }
+
+    header {
+        border-bottom: none;  
+    }
+    .nav-big{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    .total{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Esto hará que total ocupe todo el espacio restante */
+        margin: 0 0 0 20px;
+    }
+    
+    .box-sup {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 0 0;
+        padding: 0 0 10px 0;
+        border-bottom: #000000 solid 1px;
+    }
+   
+    .button {
+        font-size: 15px;
+        padding: 0.7rem 2rem;
+        border: none;
+        transition: transform 0.3s ease; /* Suaviza la transición del efecto */
+        color: black; /* Color del texto del botón */
+        border-radius: 0.5rem; /* Bordes redondeados para el botón */
+        margin: 1rem 1rem 1rem 1rem; /* Agrega un margen inferior para separar del botón */
+        cursor: pointer; 
+        background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+    }
+    
+    
+    .site-title2 {
+        display: inline-block;
+        font-size: 20px; /* Aumentado el tamaño para que sea más grande */
+        font-weight: bold;
+        font-family: 'Newsreader', serif;
+        color: #000;
+        margin: 0;
+        flex-grow: 1; /* Hace que el título ocupe el espacio disponible */
+        text-align: left; /* Alineado a la izquierda */
+    }
+
+    .icons{
+        display: flex;
+        cursor: pointer;    
+    }
+
+    .icons .fa-solid {
+        margin: 0 15px;
+        color: #000; /* Color por defecto de los íconos */
+        transition: color 0.3s; /* Transición suave para el cambio de color */
+    }
+ 
+    .icons .fa-solid:hover {
+        color: #FFC700; /* Color al hacer hover */
+    }
+    .logo-link2 img.logo2 {
+        display: block;
+        width: 70px; /* Ajusta según el tamaño de tu logo */
+        height: auto;
+        margin-right: 0px; /* Asegúrate de tener un pequeño margen entre el logo y el título */
+        margin-left: 10px;
+    }        
+
+    .box-inf{
+        display: block;
+        padding: 0;
+        text-align: left; /* Asegura que el contenido esté alineado a la izquierda */
+    }
+    ul {
+        margin: 10px 0 0 0;
+        padding: 0; /* Elimina el padding predeterminado */
+        text-align: left; /* Alinea los elementos de la lista a la izquierda */
+    }
+    li {
+        display: inline-block;
+        list-style: none;
+        font-size: 16px;
+        margin: 0;
+        text-align: left;
+    }
+    .tope {
+        text-decoration: none;
+        color: #000000;
+        font-family: 'Lato', sans-serif;
+        border-radius: 0.5rem; /* Bordes redondeados para el botón */
+        font-weight: 400;
+        padding: 10px 20px 10px 20px;
+
+
+    }
+    a.tope:hover {
+        background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+        transition: color 0.3s; /* Transición suave para el cambio de color */
+
+    }
+    a.tope:active {
+        color: white;
+        background-color: #5a7001;
+    }
+    .hero-section {
+        width: 100%;
+        display: flex;
+        position: relative;
+        background-image: url("../images/foto_1.jpg"); /* Asegúrate de que esta es la ruta correcta a tu imagen */
+        background-size: cover; /* Asegura que la imagen de fondo cubra toda la sección */
+        height: 500px; 
+        align-items: center; /* Esto centra el .hero-content vertical y horizontalmente */
+    }
+    .hero-content-big {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para mejorar la legibilidad */
+    }
+    .titol {
+        font-size: 30px;
+        margin: 30px 90px 10px 30px;
+    }
+    .box1{
+        display: flex;    
+    }
+    .hero-content-big p {
+        text-align: left;
+        margin: 0 90px 10px 30px;
+    }    
+    .button:hover {
+        background-image: linear-gradient(to right, #BE601C, #FFC700); /* Invierte la dirección del degradado para el estado hover */
+        transform: scale(0.95); /* Reduce el tamaño del botón al 95% al pasar el mouse */
+        transition: color 0.3s; /* Transición suave para el cambio de color */
+    }
+    
+    .section-title{
+        font-size: 30px;
+        margin-left: 30px;
+        font-weight: 400;
+    }
+    .matches-slider {
+        display: flex;
+        justify-content: center; /* Centra los elementos hijos horizontalmente */  
+    }
+    .align-match{
+        display: flex;
+        position: relative;
+        margin: 20px 0 0 0;
+    }
+
+    .first, .second, .third {
+        display: block;
+    }
+    .second img {
+        width: 80%; /* Ajusta la imagen al contenedor */
+    }
+    .un{
+        position: absolute;
+        width: 158px;
+        height: 50px;
+        left: 15.2%;
+        bottom: 6px;
+        margin: 0;
+    }
+
+    .dos {
+        position: absolute;
+        width: 158px;
+        height: 50px;
+        left: 50%;
+        bottom: 4.6px;
+        margin: 0;
+    }
+    .tres{
+        position: absolute;
+        width: 158px;
+        height: 50px;
+        left: 84.5%;
+        bottom: 6px;
+        margin: 0;
+    }
+
+    .slider-button {
+        position: absolute;
+        top: 40%; /* Posiciona los botones a la mitad de la altura del carrusel */
+    }
+    .news-rows-big {
+        display: block;
+        margin-top: 18px;
+    }
+    .news-rows-big .news-row .half-width .news-content .news-button {
+        display: inline-block;
+        margin: 10px 0 0 10px;
+        right: 10px;
+    }
+    .news-rows-big .news-row .half-width .news-content {
+        height: 40%;
+    }
+    .text1 {
+        color: #FFFFFF;
+        margin: 5px 47px 0 10px;
+        font-size: 15px;
+    }
+    .match1 img {
+        display: block;
+        position: relative;
+        width: 100%; /* Ajusta la imagen al contenedor */
+        max-width: 600px; /* Ajusta el ancho máximo de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    .photo-section .section-title {
+        margin-bottom: 39px;
+    }
+    .footer-section h4 {
+        font-size: 14px;
+
+    }
+    .links-foot {
+        font-size: 15px;
+    }
+    .footer-section address {
+        display: flex;
+        position: relative;
+        font-size: 15px; /* Ajustado para mejorar la legibilidad */
+        font-style: normal; /* Addresses are italic by default */
+        padding-top: 10%;
+        margin: 0;
+    }
+    .social-media-icons {
+        display: flex;
+        margin-top: 0;
+        justify-content: left;
+        gap: 10px;
+    }
+    .maps {
+        display: block;
+    }
+    .mapa {
+        display: inline;
+        width: 400px;
+        margin: 30px auto 0 auto;
+    }
+    .intro-section .section-title {
+        margin-top: 2rem;
+    }
+    .fourth-section {
+        display: flex;
+    }
+    .fourth-section img {
+        display: inline-block;
+        position: relative;    
+        margin: 20px auto 50px 30px;
+        width: 20%; /* Ajusta la imagen al contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    .tex-escudo {
+        margin-bottom: 10px;
+    }
+    .text-normal {
+        margin: 0 30px 40px 30px;
+        text-align: justify;
+    }
+    .intro-section .section-text {
+        margin: 0 3rem 0 3rem;
+        text-align: center;
+        padding-top: 5rem;
+    }
+    .mostra {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .contenedor-productos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 40px 50px auto 50px;
+    }
+    .head-cart {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart-button {
+        margin-top: 30px;
+    }
+    .producto-cart {
+        display: inline-block;
+        background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 0.3rem; /* Bordes redondeados para el botón */
+        padding: 1rem 3rem;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+    .producto-cart:hover {
+        background-image: linear-gradient(to right, #BE601C, #FFC700); /* Invierte la dirección del degradado para el estado hover */
+        transform: scale(0.95); /* Reduce el tamaño del botón al 95% al pasar el mouse */
+        transition: color 0.3s; /* Transición suave para el cambio de color */
+    }
+    .user-input-box {
+        width: 50%;
+    }
+    .user-input-box:nth-child(2n) {
+        justify-content: end;
+    }
+    .horari-category {
+        margin: 15px 0;
+    }
+    .user-input-box input {
+        width: 95%;
+    }
+    form {
+        width: calc(100% - 200px); /* Restar el doble del padding del contenedor */
+        margin: auto; /* Centra el formulario horizontalmente */
+    }
+    .matches-slider {
+        display: flex;
+        position: relative;
+        text-align: center; /* Centra los botones y la imagen */
+        justify-content: center;
+    }
+    
+    .slider-button {
+        margin: 40px;
+        padding: 0.7rem 0.8rem;
+        background-image: linear-gradient(to right, #E56C14, #FFF500); /* De izquierda a derecha */
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-radius: 0.5rem; /* Bordes redondeados para el botón */
+    }  
+    .slider-button.prev {
+        display: inline-block;
+        position: relative;
+        height: calc(50% - 8px); 
+        top: 7rem;   
+    
+    }
+    .slider-button.next {
+        display: inline-block;
+        position: relative;
+        height: calc(50% - 8px); 
+        top: 7rem;       }
+    
+}
